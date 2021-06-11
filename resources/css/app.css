@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'list.css';
+@import 'form.css';
+@import 'nav.css';
+@import 'flipcard.css';
+.operations-list {
+    display: none;
+}
+
+.buton-panou {
+    border-width: 2px;
+    border-style: groove;
+    border-color: #e5e7eb;
+}
+

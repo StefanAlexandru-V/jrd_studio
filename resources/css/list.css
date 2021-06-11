@@ -1,0 +1,94 @@
+.panel {
+    /*max-width: 490px;*/
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+.panel header {
+    --start: 15%;
+    height: 130px;
+    /*background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(79, 26, 114, 0.33) 10%, rgba(56, 53, 128, 0.33) 17%), linear-gradient(to right, #1d3d6a, #2d0692);*/
+    color: #fff;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    background: black;
+}
+.panel header .panel__title {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: calc(var(--start) * .75);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    margin: 0;
+}
+.panel header .panel__title span {
+    display: block;
+}
+.panel header .panel__title--top {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 6.5px;
+}
+.panel header .panel__title--bottom {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3.55px;
+    opacity: 0.65;
+    transform: translateY(-2px);
+}
+
+.panel__articles {
+    background-color: black;
+    border-radius: 0 0 12px 12px;
+    padding: 15px 15px 20px;
+    display: grid;
+    row-gap: 8px;
+}
+.panel__article {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    padding: 10px 30px 10px 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+    background-color: inherit;
+}
+.panel__article:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 4px lightgray;
+}
+
+.panel__name {
+    color: #979cb0;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.64px;
+    margin-left: 12px;
+}
+.panel__value {
+    color: white;
+    font-weight: 700;
+}
+.panel__value > span {
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 3px;
+}
+body {
+    margin: 0;
+    background-color: #eaeaea;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.panel {
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+}
+
